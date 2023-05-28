@@ -271,61 +271,17 @@ const canvas = document.getElementById('canvas');
     }
   }
 
-//로그인
-const loginIcon = document.querySelector('#login-icon');
-    const modal = document.querySelector('#modal');
-    const loginForm = document.querySelector('#login-form');
-    const usernameInput = document.querySelector('#username');
-    const passwordInput = document.querySelector('#password');
 
-    // 로그인 버튼 클릭 시 모달 창 열기
-    loginIcon.addEventListener('click', () => {
-      modal.style.display = 'block';
-    });
 
-    // 모달 창 닫기
-    const closeModal = () => {
-      modal.style.display = 'none';
-    };
-
-    // 로그인 폼 제출 시 처리
-    loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      // 사용자명과 비밀번호 가져오기
-      const username = usernameInput.value;
-      const password = passwordInput.value;
-
-      // 로그인 검증
-      if (username === 'admin' && password === 'password') {
-        // 인증 성공
-        closeModal();
-        alert('로그인에 성공하였습니다.');
-        // 로그인 상태를 로컬 스토리지에 저장
-        localStorage.setItem('isLoggedIn', 'true');
-      } else {
-        // 인증 실패
-        alert('사용자명 또는 비밀번호가 올바르지 않습니다.');
-      }
-    });
-
-    // 페이지 로드 시 로그인 상태 확인
-    window.addEventListener('load', () => {
-      // 로그인 상태 확인
-      const isLoggedIn = localStorage.getItem('isLoggedIn');
-
-      if (isLoggedIn === 'true') {
-        // 로그인 상태일 경우 처리
-        alert('이미 로그인되어 있습니다.');
-      } else {
-        // 로그인 상태가 아닐 경우 처리
-        modal.style.display = 'block';
-      }
-    });
-
-    // 모달 창 외부 클릭 시 모달 창 닫기
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
+  const namePlaceholder = document.querySelector('#name-placeholder');
+  const storedName = localStorage.getItem('name');
+  if (storedName) {
+    namePlaceholder.textContent = storedName;
+  }
+  
+  const logoutIcon = document.querySelector('#logout-icon');
+  
+  logoutIcon.addEventListener('click', () => {
+    localStorage.removeItem('name');
+    window.location.href = 'index.html';
+  });

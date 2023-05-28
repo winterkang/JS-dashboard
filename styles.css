@@ -140,7 +140,7 @@ body{
 .controls {
   display: flex;
   justify-content: flex-end;
-  margin: 10px 5px 0 0;
+  margin: 10px 15px 0 0;
 }
 
 #color-picker,
@@ -187,56 +187,6 @@ body{
   background-color: #fff;
 }
 
-#modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.655);
-}
-
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
-.modal-content h2 {
-  text-align: center;
-}
-
-.modal-content form {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-content label {
-  margin-bottom: 5px;
-}
-
-.modal-content input {
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.modal-content button {
-  padding: 10px 20px;
-  background-color: #74747492;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 .welcome{
   width: fit-content;
   height: fit-content;
@@ -259,14 +209,56 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(70%, -20%);
+  transform: translate(70%, 7%);
   z-index: 1;
   opacity: 0.7;
 }
 
 .weather span {
-  margin: 10px;
+  margin: 5px;
   position: relative;
   z-index: 2;
   font-size: large;
 }
+
+  /* 폼 컨테이너 스타일 */
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  /* 제목 스타일 */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  /* 입력란 스타일 */
+  #name-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* 버튼 스타일 */
+  #name-button {
+    padding: 10px 20px;
+    background-color: #7b7b7b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #name-button:hover {
+    background-color: #3c3c3c;
+  }
