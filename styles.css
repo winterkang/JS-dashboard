@@ -1,0 +1,272 @@
+body{
+  background-color: #E5E4E9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Prompt', sans-serif;
+}
+#dash-board{
+  width: 1200px;
+  display: flex;
+  height: 650px;
+  border-radius: 10px;
+  opacity: 80%;
+  box-shadow: -5px 5px 20px 10px rgba(0, 0, 0, 0.159);
+}
+/* 사이드바 */
+.side-bar{
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: black;
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile span{
+  text-align: center;
+  margin-bottom: 6.7em;
+  color: #fff;
+  position:absolute;
+}
+.profile-icon{
+  color: #414345;
+  font-weight: 700;
+  cursor: pointer;
+}
+.side-bar span{
+  margin-top: 1.5em;
+  font-size: 30px;
+  text-align: center;
+}
+.side-bar span:last-child{
+  margin-top: 200px;
+}
+/* 메인 페이지 */
+#dash-board{
+  width: 1200px;
+  display: flex;
+  height: 650px;
+  border-radius: 10px;
+  opacity: 80%;
+  box-shadow: -5px 5px 20px 10px rgba(0, 0, 0, 0.159);
+}
+/* 사이드바 */
+.side-bar{
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-page .box1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10em;
+  width: 1000px;
+}
+.my-page .box2{
+  display: flex;
+  height: 25em;
+  width: 1000px;
+}
+.todo-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 27em;
+
+  overflow-y: scroll;
+}
+#todo-form input{
+  text-align: center;
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 20em;
+  height: 3em;
+  outline: none;
+  opacity: 0.7;
+}
+#todo-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  flex-grow: 1;
+}
+#todo-list li{
+  margin: 10px 0;
+  position: relative;
+}
+#todo-list button {
+  margin-left: 10px;
+  border: none;
+  background-color: none;
+  position: absolute;
+  right: 50px;
+  transform: translateX(100%);
+}
+#todo-list input{
+  margin-right: 15px;
+}
+.drawing-box{
+  height: fit-content;
+  flex-grow: 1;
+}
+#canvas {
+  height: 25em;
+  background-color: #fff;
+  opacity: 0.7;
+  margin: 20px;
+  cursor: crosshair;
+}
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 5px 0 0;
+}
+
+#color-picker,
+#clear-button,
+#save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.622);
+  cursor: pointer;
+  margin-right: 5px;
+}
+/* 명언 */
+.quote-box{
+  padding: 2.5em;
+  width: 500px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 15px;
+}
+.quote-box span:last-child{
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Kalam', cursive;
+}
+/* 시계 */
+.clock{
+  margin: 1em;
+  /* font-family: 'Londrina Outline', cursive; */
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  /* font-weight: 600; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.655);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  text-align: center;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content label {
+  margin-bottom: 5px;
+}
+
+.modal-content input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #74747492;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.welcome{
+  width: fit-content;
+  height: fit-content;
+  font-size: larger;
+  margin-left: 20px;
+}
+.weather {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
+
+.weather-icon-container {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(70%, -20%);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.weather span {
+  margin: 10px;
+  position: relative;
+  z-index: 2;
+  font-size: large;
+}
