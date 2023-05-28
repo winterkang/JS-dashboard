@@ -270,18 +270,3 @@ const canvas = document.getElementById('canvas');
       };
     }
   }
-
-
-
-  const namePlaceholder = document.querySelector('#name-placeholder');
-  const storedName = localStorage.getItem('name');
-  if (storedName) {
-    namePlaceholder.textContent = storedName;
-  }
-  
-  const logoutIcon = document.querySelector('#logout-icon');
-  
-  logoutIcon.addEventListener('click', () => {
-    localStorage.removeItem('name');
-    window.location.href = 'index.html';
-  });
